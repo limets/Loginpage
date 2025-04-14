@@ -1,0 +1,149 @@
+* {
+  @keyframes waveFade {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #569aaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  animation: waveFade 8s ease-in-out infinite;
+  background: linear-gradient(90deg, rgb(206, 51, 136) 0%, rgb(133, 68, 113) 35%, rgb(134, 79, 125) 100%);
+  background-size: 200% 100%;
+}
+
+/* CAIXA PRINCIPAL */
+.login-box {
+  background: #180909;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 
+    5px 5px 15px #e9d9d9,
+    -5px -5px 15px #eee4e4,
+    inset 2px s2px 5px #eee2e2,
+    inset -2px -2px 5px #f3e6e6;
+  border: 2px solid #dad0d0;
+}
+
+/* TÍTULO */
+.login-box h2 {
+  text-align: center;
+  color: #16091d;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: #e0e0e0;
+  box-shadow:
+    6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #180d0d;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #265e99; /* cor inicial */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, background 0.4s ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  z-index: 1;
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+
+}
+ 
+button:hover::before {
+  left: 100%;
+}
+
+/* Mantém o texto na frente do brilho */
+button span {
+  position: relative;
+  z-index: 2;
+}
+/* Link "Esqueceu sua senha?" */
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #265e99;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #1d4e80;
+}
+
+
+#loginForm {
+  background: #e0e5ec;
+  padding: 30px;
+  border-radius: 30px;
+  width: 20%;
+  max-width: 350px;
+  box-shadow:
+    3px 3px 6px rgba(0, 0, 0, 0.1),  /* Sombra externa suave */
+    inset 1px 1px 2px rgba(0, 0, 0, 0.1), /* Sombra interna suave */
+    inset -1px -1px 2px rgba(255, 255, 255, 0.3); /* Sombra interna suave */
+  border: 1px solid #e0e5ec; /* Borda suave, praticamente invisível */
+}
