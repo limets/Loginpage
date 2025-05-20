@@ -1,4 +1,4 @@
- # 💻 Página de Login com Neumorphism
+ # 💻 Página de Login
 
 Este projeto é uma **página de login moderna** com visual inspirado no **Neumorphism**, animação de fundo e validação de e-mail/senha em JavaScript. Ideal para integrar com um backend futuramente.
 
